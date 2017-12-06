@@ -19,20 +19,23 @@ public class Main {
             count++;
         }
 
-        count = 20;
-        while (isEvenNumber(count)) {
-            if (count == 100) {
-                break;
+        int number = 5;
+        int finishNumber = 20;
+        while (number <= finishNumber) {
+            if (!isEvenNumber(number)) {
+                number++;
+                //continue DOES move on, don't stop - like does the break
+                continue;
             }
-            System.out.println("Even numbers are " + count);
-            count++;
+            System.out.println("Even numbers " + number);
+            number++;
         }
 
     }
 
     private static boolean isEvenNumber(int number) {
 
-        if (number % 2 == 0) {
+        if ((number % 2) == 0) {
             return true;
         } else {
             return false;
