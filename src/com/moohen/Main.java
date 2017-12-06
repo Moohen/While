@@ -21,15 +21,24 @@ public class Main {
 
         int number = 5;
         int finishNumber = 20;
+        int evenNumbersFound = 0;
         while (number <= finishNumber) {
             if (!isEvenNumber(number)) {
                 number++;
                 //continue DOES move on, don't stop - like does the break
                 continue;
             }
+
             System.out.println("Even numbers " + number);
             number++;
+
+            evenNumbersFound++;
+            if (evenNumbersFound >= 5){
+                break;
+            }
         }
+
+        System.out.println("Total even numbers found " + evenNumbersFound);
 
     }
 
